@@ -1,9 +1,12 @@
 {
   "manifest_version": 3,
   "name": "Shiki Player",
-  "version": "1.0",
-  "description": "Video player integration for Shikimori",
-  "permissions": ["activeTab"],
+  "version": "1.0.0",
+  "description": "Kodik player integration for Shikimori",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
   "host_permissions": [
     "*://*.shiki.one/*",
     "*://*.shikimori.one/*",
@@ -19,7 +22,9 @@
         "*://shikimori.me/animes/*",
         "*://shiki.one/animes/*"
       ],
-      "js": ["content.js"],
+      "js": [
+        "content.js"
+      ],
       "run_at": "document_end"
     }
   ]
