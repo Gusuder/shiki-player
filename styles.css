@@ -1,0 +1,37 @@
+/* Кнопка в стиле Shikimori */
+.shiki-watch-btn {
+    display: inline-block;
+    background-color: #4682b4; /* Стандартный синий цвет */
+    color: #fff !important;
+    padding: 8px 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.shiki-watch-btn:hover {
+    background-color: #386a94;
+}
+
+/* Контейнер плеера */
+#shiki-player-container {
+    margin: 20px 0;
+    background: #000;
+    border-radius: 4px;
+    overflow: hidden;
+    display: none; /* Скрыт по умолчанию */
+}
+
+#shiki-player-iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    display: block;
+}
