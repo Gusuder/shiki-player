@@ -2,18 +2,12 @@
   "manifest_version": 3,
   "name": "Shiki Player",
   "version": "1.0.0",
-  "description": "Kodik player integration for Shikimori",
-  "permissions": [
-    "activeTab",
-    "scripting"
-  ],
+  "description": "Video player integration for Shikimori",
+  "permissions": [],
   "host_permissions": [
     "*://*.shiki.one/*",
     "*://*.shikimori.one/*",
-    "*://*.shikimori.me/*",
-    "*://*.kodik.info/*",
-    "*://*.kodik.biz/*",
-    "*://*.kodik.cc/*"
+    "*://*.shikimori.me/*"
   ],
   "content_scripts": [
     {
