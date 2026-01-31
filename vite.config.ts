@@ -1,12 +1,18 @@
 import { defineConfig } from 'vite';
+// @ts-ignore
 import { crx, defineManifest } from '@crxjs/vite-plugin';
 
 const manifest = defineManifest({
   manifest_version: 3,
   name: 'Shiki Player TS',
-  version: '1.0.0',
+  version: '2.0.0',
   description: 'Video player integration for Shikimori',
-  permissions: [],
+  permissions: ['storage'], // Важно для сохранения настроек
+  action: {
+    default_popup: 'src/popup/popup.html',
+    // Если у вас нет иконки, можно пока закомментировать default_icon или использовать заглушку
+    // default_icon: 'public/icon.png'
+  },
   host_permissions: [
     '*://*.shiki.one/*',
     '*://*.shikimori.one/*',
@@ -27,4 +33,11 @@ const manifest = defineManifest({
 
 export default defineConfig({
   plugins: [crx({ manifest })],
+  server: {
+    port: 5173,
+    strictPort: true,
+    hmr: {
+      port: 5173
+    }
+  },
 });

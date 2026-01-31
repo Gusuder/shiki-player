@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shiki Player Settings</title>
+</head>
+<body>
+  <div class="header">
+    <div class="logo-area">
+      <span class="icon">🎌</span>
+      <span class="title">Shiki Player</span>
+    </div>
+    <div class="version">v2.0</div>
+  </div>
+
+  <div class="content">
+    
+    <!-- Главная настройка: Источник -->
+    <div class="setting-group">
+      <div class="setting-header">Основной источник</div>
+      <div class="select-wrapper">
+        <select id="playerSource" class="main-select">
+          <option value="kodik">Kodik (Рекомендуем)</option>
+          <option value="alloha" disabled>Alloha (Скоро)</option>
+          <option value="turbo" disabled>Turbo (Скоро)</option>
+        </select>
+        <div class="select-arrow">▼</div>
+      </div>
+      <div class="hint">Откуда загружать видео по умолчанию</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Настройки плеера -->
+    <div class="setting-item">
+      <div class="label-group">
+        <label for="autoplay">Автозапуск</label>
+        <div class="sub-label">Включать видео сразу</div>
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="autoplay">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <!-- Настройки Kodik -->
+    <div class="setting-group" id="kodikSettings">
+      <div class="setting-header small">Настройки Kodik</div>
+      <select id="kodikVoice" class="secondary-select">
+        <option value="any">Любая озвучка</option>
+        <option value="610">AniLibria</option>
+        <option value="609">AniDUB</option>
+        <option value="1">SHIZA Project</option>
+        <option value="subtitles">Субтитры</option>
+      </select>
+    </div>
+
+    <!-- Статус бар -->
+    <div class="status-bar" id="status">
+      <div class="status-dot"></div>
+      <span id="statusText">Готов к работе</span>
+    </div>
+  </div>
+
+  <script type="module" src="./popup.ts"></script>
+</body>
+</html>

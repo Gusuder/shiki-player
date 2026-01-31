@@ -14,17 +14,16 @@ function getAnimeId(): string | null {
 }
 
 function findInjectionPoint(): Element | null {
-    const selectors = [
-        '.l-content .block',
-        '.c-info-right',
-        'body'
-    ];
+    // 1. Идеальное место (пустой блок от Shikimori)
+    const officialBlock = document.querySelector('.watch-online');
+    if (officialBlock) return officialBlock;
 
-    for (const selector of selectors) {
-        const element = document.querySelector(selector);
-        if (element) return element;
-    }
-    return null;
+    // 2. Если его нет, вставляем перед блоком "Рейтинг" справа
+    const rightCol = document.querySelector('.c-info-right');
+    if (rightCol) return rightCol;
+
+    // 3. Фоллбэк
+    return document.querySelector('.l-content .block') || document.body;
 }
 
 function createPlayerUI(animeId: string): PlayerUI {
