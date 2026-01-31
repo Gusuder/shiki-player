@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Shiki Player",
-  "version": "1.0.0",
+  "version": "1.0.1", 
   "description": "Video player integration for Shikimori",
   "permissions": [],
   "host_permissions": [
@@ -16,9 +16,8 @@
         "*://shikimori.me/animes/*",
         "*://shiki.one/animes/*"
       ],
-      "js": [
-        "content.js"
-      ],
+      "js": ["content.js"],
+      "css": ["styles.css"],
       "run_at": "document_end"
     }
   ]
